@@ -1,0 +1,42 @@
+<ion-menu side="start" menuId="menu1" contentId="mainApp">
+  <ion-header>
+    <ion-toolbar color="primary">
+<!--      Side Menu-->
+      <ion-title>Mario Komp Store</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle menu="menu1">
+<!--        Home-->
+        <ion-item (click)="closeMenu" [routerLink]="['/home']">
+          <ion-icon name="home-outline" slot="start"></ion-icon>
+          <ion-label>Home </ion-label>
+        </ion-item>
+<!--        Admin-->
+        <ion-item (click)="closeMenu" [routerLink]="['/admin']">
+          <ion-icon name="people-outline" slot="start"></ion-icon>
+          <ion-label>Admin</ion-label>
+        </ion-item>
+<!--        About App-->
+        <ion-item (click)="closeMenu" [routerLink]="['/about-app']">
+          <ion-icon  name="information-outline" slot="start"></ion-icon>
+          <ion-label>About App</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+<!--      Exit-->
+      <ion-item (click)="closeMenu" [routerLink]="['/home']">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        <ion-label>Exit</ion-label>
+      </ion-item>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+
+<ion-app>
+  <ion-router-outlet id="mainApp"></ion-router-outlet>
+</ion-app>

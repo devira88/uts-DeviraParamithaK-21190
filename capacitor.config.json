@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "uts-DeviraParamitha-21190",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

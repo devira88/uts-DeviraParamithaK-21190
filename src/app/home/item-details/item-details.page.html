@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-item>
+      <ion-icon slot="end" (click)="presentAlert()" name="trash"></ion-icon>
+      <ion-title>Item Detail</ion-title>
+    </ion-item>
+    <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content *ngIf="itemDetails.jenis === 'CPU' ">
+    <ion-grid>
+      <ion-row>
+        <br>
+        <ion-img  style=" margin: auto; width: 400px; height: 400px; display: block; align-self: center;"[src]="itemDetails.foto"></ion-img>
+        <ion-col>
+          <ion-label style="font-size: x-large; margin-left: 20px; align-self: center;"> {{itemDetails.nama}} <br></ion-label>
+          <ion-label style="font-size: large;margin-left: 20px; align-self: center;"> Rp {{itemDetails.harga}},-<br></ion-label>
+          <ion-label style="font-size: large;margin-left: 20px; align-self: center;"> Tersedia: {{itemDetails.stok}}<br><br></ion-label>
+          <ion-label style="font-size: large;margin-left: 20px; align-self: center;"> Tentang produk: <br><br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Model: {{itemDetails.model}}<br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Base Clock: {{itemDetails.deskripsi.baseClock}}<br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> BoostClock: {{itemDetails.deskripsi.boostClock}}<br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Jumlah Core: {{itemDetails.deskripsi.jumlahCore}}<br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Thread: {{itemDetails.deskripsi.thread}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  <ion-content *ngIf="itemDetails.jenis === 'RAM' ">
+    <ion-grid>
+      <ion-row>
+        <br>
+        <ion-img  style=" margin: auto; width: 400px; height: 400px; display: block; align-self: center;" [src]="itemDetails.foto"></ion-img>
+        <ion-col>
+          <ion-label style="font-size: x-large; margin-left: 20px; align-self: center;"> {{itemDetails.nama}} <br></ion-label>
+          <ion-label style="font-size: large; margin-left: 20px; align-self: center;"> Rp {{itemDetails.harga}},-<br></ion-label>
+          <ion-label style="font-size: large; margin-left: 20px; align-self: center;"> Tersedia: {{itemDetails.stok}}<br><br></ion-label>
+          <ion-label style="font-size: large;margin-left: 20px; align-self: center;"> Tentang produk: <br><br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Model: {{itemDetails.model}}<br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Speed: {{itemDetails.deskripsi.speed}}<br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Ukuran: {{itemDetails.deskripsi.ukuran}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  <ion-content *ngIf="itemDetails.jenis === 'MOTHERBOARD' ">
+    <ion-grid>
+      <ion-row>
+        <br>
+        <ion-img style=" margin: auto; width: 400px; height: 400px; display: block; align-self: center;" [src]="itemDetails.foto"></ion-img>
+        <ion-col>
+          <ion-label style="font-size: x-large; margin-left: 20px; align-self: center;"> {{itemDetails.nama}} <br></ion-label>
+          <ion-label style="font-size: large; margin-left: 20px; align-self: center;"> Rp {{itemDetails.harga}},-<br></ion-label>
+          <ion-label style="font-size: large; margin-left: 20px; align-self: center;"> Tersedia: {{itemDetails.stok}}<br><br></ion-label>
+          <ion-label style="font-size: large;margin-left: 20px; align-self: center;"> Tentang produk: <br><br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Model: {{itemDetails.model}}<br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Chipset: {{itemDetails.deskripsi.chipset}}<br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Merk Processor: {{itemDetails.deskripsi.merkProcessor}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  <ion-content *ngIf="itemDetails.jenis === 'GPU' ">
+    <ion-grid>
+      <ion-row>
+        <br>
+        <ion-img  style=" margin: auto; width: 400px; height: 400px; display: block; align-self: center;" [src]="itemDetails.foto"></ion-img>
+        <ion-col>
+          <ion-label style="font-size: x-large; margin-left: 20px; align-self: center;"> {{itemDetails.nama}} <br></ion-label>
+          <ion-label style="font-size: large; margin-left: 20px; align-self: center;"> Rp {{itemDetails.harga}},-<br></ion-label>
+          <ion-label style="font-size: large; margin-left: 20px; align-self: center;"> Tersedia: {{itemDetails.stok}}<br><br></ion-label>
+          <ion-label style="font-size: large;margin-left: 20px; align-self: center;"> Tentang produk: <br><br></ion-label>
+          <ion-label style="font-size: medium; margin-left: 20px; align-self: center;"> Model: {{itemDetails.model}}<br></ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-content>
+

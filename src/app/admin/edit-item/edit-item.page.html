@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Edit Item</ion-title>
+    <ion-back-button slot="start" defaultHref="/admin"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Url Foto</ion-label>
+    <ion-input [(ngModel)]="editedFoto"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nama Barang</ion-label>
+    <ion-input [(ngModel)]="editedNama"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Model</ion-label>
+    <ion-input [(ngModel)]="editedModel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Harga</ion-label>
+    <ion-input [(ngModel)]="editedHarga"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Stok</ion-label>
+    <ion-input type="number" [(ngModel)]="editedStok"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="itemDetails.jenis === 'CPU' ">
+    <ion-label position="floating">Base Clock</ion-label>
+    <ion-input  [(ngModel)]="editedBaseClock"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="itemDetails.jenis === 'CPU' ">
+    <ion-label position="floating">Boost Clock</ion-label>
+    <ion-input [(ngModel)]="editedBoostClock"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="itemDetails.jenis === 'CPU' ">
+    <ion-label position="floating">Jumlah Core</ion-label>
+    <ion-input [(ngModel)]="editedCore"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="itemDetails.jenis === 'CPU' ">
+    <ion-label position="floating">Thread</ion-label>
+    <ion-input  [(ngModel)]="editedThread"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="itemDetails.jenis === 'RAM'">
+    <ion-label position="floating">Speed</ion-label>
+    <ion-input  [(ngModel)]="editedSpeed"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="itemDetails.jenis === 'RAM'">
+    <ion-label position="floating">Ukuran</ion-label>
+    <ion-input  [(ngModel)]="editedUkuran"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="itemDetails.jenis === 'MOTHERBOARD' ">
+    <ion-label position="floating">Chipset</ion-label>
+    <ion-input [(ngModel)]="editedChipset"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="itemDetails.jenis === 'MOTHERBOARD' ">
+    <ion-label position="floating">Merk Processor</ion-label>
+    <ion-input  [(ngModel)]="editedmerkProcessor"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full"(click)=confirmEdit()>Confirm</ion-button>
+</ion-content>
